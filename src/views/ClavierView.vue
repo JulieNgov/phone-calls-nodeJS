@@ -16,6 +16,7 @@ export default {
     methods: {
         addNumber(number) {
             this.contact.numero += number;
+            this.errorMessage = '';
             this.validateInput();
         },
         validateInput() {
@@ -28,6 +29,10 @@ export default {
         },
         addContact(event) {
             event.preventDefault();
+            if (!this.contact.numero) {
+                this.errorMessage = 'Number is required';
+                return;
+            }
             const contactStore = useContactStore();
             const existingContact = contactStore.contacts.find(c => c.numero === this.contact.numero);
             if (!existingContact) {
@@ -43,6 +48,10 @@ export default {
         },
         call(event) {
             event.preventDefault();
+            if (!this.contact.numero) {
+                this.errorMessage = 'Number is required';
+                return;
+            }
             if (!this.contact.nom) {
                 this.contact.nom = 'Unknown';
             }
