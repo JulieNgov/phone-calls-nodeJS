@@ -79,4 +79,20 @@ export default {
 .contact-container button:active {
   background-color: #aaa;
 }
+
+@media (max-width: 700px) {
+    .contact-container {
+        width: 100%;
+        padding-inline: 20px;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact div {
+        margin-top: 10px;
+    }
+}
 </style>

@@ -156,4 +156,24 @@ export default {
     text-align: center;
 }
 
+@media (max-width: 800px) {
+    .clavier-container {
+        width: 100%;
+        padding-inline: 20px;
+    }
+    
+    .clavier-container .keyboard {
+        width: 50%;
+    }
+
+    .clavier-container form {
+        flex-direction: column;
+    }
+
+    .clavier-container form input {
+        width: 100%;
+    }
+}
+
+
 </style>

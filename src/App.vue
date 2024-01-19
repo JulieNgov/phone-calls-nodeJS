@@ -22,7 +22,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  margin: 40px;
+  margin:40px;
   align-items: center;
   border-radius: 0.5rem;
   border: 1px solid #ccc;

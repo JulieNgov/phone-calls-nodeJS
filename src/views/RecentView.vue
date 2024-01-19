@@ -74,5 +74,22 @@ export default {
   border: 1px solid #ccc;
 }
 
+@media (max-width: 800px) {
+  .recent-container {
+    width: 100%;
+    padding-inline: 20px;
+  }
+
+  .recent-container .call {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .recent-container #add-contact {
+    position: relative;
+    left: 0;
+    margin-top: 10px;
+  }
+}
 </style>
 
